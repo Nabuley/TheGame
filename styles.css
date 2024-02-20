@@ -31,12 +31,6 @@ body, html {
     z-index: 1;
     font-weight: bold;
 }
-/*
-@keyframes moveLeft {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-100px); }
-    100% { transform: translateX(0); }
-}*/
 
 @keyframes fadeOut {
     from { opacity: 1; }
