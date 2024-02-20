@@ -1,0 +1,170 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#damageText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em; /* 글씨체 크기를 키웁니다. */
+    color: red; /* 글씨 색을 붉은색으로 변경합니다. */
+    font-family: "System"; /* 글씨체를 "System"으로 변경합니다. */
+    animation: fadeOut 1s linear forwards;
+    z-index: 1;
+    font-weight: bold;
+}
+
+#damageText2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em; /* 글씨체 크기를 키웁니다. */
+    color: rgb(255, 255, 255); /* 글씨 색을 붉은색으로 변경합니다. */
+    font-family: "System"; /* 글씨체를 "System"으로 변경합니다. */
+    animation: fadeOut 1s linear forwards;
+    z-index: 1;
+    font-weight: bold;
+}
+/*
+@keyframes moveLeft {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-100px); }
+    100% { transform: translateX(0); }
+}*/
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 3s; /* 애니메이션 지속 시간을 조절하실 수 있습니다. */
+}
+
+#game {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#game .healthBarContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: red;
+}
+
+#game #bossHealthBarContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px; 
+    background-color: red;
+}
+
+#game #playerHealthBarContainer {
+    position: absolute;
+    bottom: 15px; 
+    left: 500px;
+    right: 500px;
+    height: 20px; 
+    background-color: red;
+}
+
+#game .healthBar {
+    height: 100%;
+    background-color: yellow;
+}
+
+#game #bossHealthBar {
+    width: 100%;
+}
+
+#game #playerHealthBar {
+    width: 100%;
+}
+
+#playerStats {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    color: white;  /* 글자 색을 흰색으로 설정합니다. */
+}
+
+#bossStats {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;  /* 글자 색을 흰색으로 설정합니다. */
+}
+
+#boss {
+    width: 450px;
+    height: 600px;
+    left: calc(50% - 225px);
+    top: 50px;
+}
+
+#player {
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 30px);
+    bottom: 50px;
+}
+
+.entity {
+    position: absolute;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    left: 0;
+}
+
+#buttons button {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    margin: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    transition: all 0.1s;
+    text-shadow: 0px -2px rgba(0, 0, 0, 0.44);
+    font-family: 'Lobster', cursive;
+    width: 100%;
+    text-align: center;
+}
+
+#buttons button:active {
+    transform: translateY(3px);
+}
+
+#attack {
+    background-color: red;
+    border-bottom:5px solid #165195;
+}
+
+#action {
+    background-color: yellow;
+    border-bottom:5px solid #165195;
+}
+
+#defend {
+    background-color: #1f75d9;
+    border-bottom:5px solid #165195;
+}
